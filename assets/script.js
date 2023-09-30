@@ -3,7 +3,7 @@ let userInputEl = document.querySelector('#user-input')
 let locationEl = document.querySelector('#location')
 
 
-userInputEl.addEventListener('click', function(e){
+userInputEl.addEventListener('submit', function(e){
     e.preventDefault()
     let location = locationEl.value
    fetch(

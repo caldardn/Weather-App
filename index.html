@@ -9,10 +9,10 @@
 </head>
 <body>
   <header class="header">
-    <h1>Five Day Forcast</h1>
+    <h1>Weather Report</h1>
   </header>
 
-  <Main>
+  <main>
     <div class = card>
         <h3>Which City Are You Looking For?</h3>
 
@@ -24,28 +24,69 @@
             class="form-input"
             placeholder="e.g. Richmond"
             />
-            <button type="click" class="btn">Search</button>
+            <button type="submit" class="btn">Search</button>
         </form>
+
+        <div class="search-history">Previous Search</div>
+
     </div>
+
 
     <div id="weather-cards">
-
         <header>
-            <div id="location"></div>
-            <div id="today"></div>
-          </header>
-          <div id="weather"></div>
-          <img src="" id="icon" />
-          <div id="description"></div>
-          <div id="temp"></div>
-          <div id="wind"></div>
-          <div id="humidity"></div>
-          <div id="uvi"></div>
-
+            <div id="city">City</div>
+            <div id="currentDate">Date</div>
+        </header>
+        <div id="currentTemp">Temperature</div>
+        <div id="currentDisc">discription</div>
+        <div id="currentWind">Wind</div>
+        <div id="currentHumidity">Humidity</div>
     </div>
 
+    <h4>5 Day Forcast</h4>
+<div id="5-day-cards">
+    <section class="row">
+        <div id="date1">Date</div>
+        <div id="temperature1"></div>
+        <div id="discription1">discription</div>
+        <div id="wind1">Wind</div>
+        <div id="humidity1">Humidity</div>
+    </section>
+        
+    <section class="row">
+        <div id="date2">Date</div>
+        <div id="temperature2"></div>
+        <div id="discription2">discription</div>
+        <div id="wind2">Wind</div>
+        <div id="humidity2">Humidity</div>
+    </section>
 
-  </Main>
+    <section class="row">
+        <div id="date3">Date</div>
+        <div id="temperature3"></div>
+        <div id="discription3">discription</div>
+        <div id="wind3">Wind</div>
+        <div id="humidity3">Humidity</div>
+    </section>
+
+    <section class="row">
+        <div id="date4">Date</div>
+        <div id="temperature4"></div>
+        <div id="discription4">discription</div>
+        <div id="wind4">Wind</div>
+        <div id="humidity4">Humidity</div>
+    </section>
+
+    <section class="row">
+        <div id="date5">Date</div>
+        <div id="temperature5"></div>
+        <div id="discription5">discription</div>
+        <div id="wind5">Wind</div>
+        <div id="humidity55">Humidity</div>
+    </section>
+</div>
+
+  </main>
 
     
 
