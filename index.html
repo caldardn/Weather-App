@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Five Day Forcast</h1>
+  </header>
+
+  <Main>
+    <div class = card>
+        <h3>Which City Are You Looking For?</h3>
+
+        <form id = "user-input">
+            <input 
+            name="city"
+            type="text"
+            id = "location"
+            class="form-input"
+            placeholder="e.g. Richmond"
+            />
+            <button type="click" class="btn">Search</button>
+        </form>
+    </div>
+
+    <div id="weather-cards">
+
+        <header>
+            <div id="location"></div>
+            <div id="today"></div>
+          </header>
+          <div id="weather"></div>
+          <img src="" id="icon" />
+          <div id="description"></div>
+          <div id="temp"></div>
+          <div id="wind"></div>
+          <div id="humidity"></div>
+          <div id="uvi"></div>
+
+    </div>
+
+
+  </Main>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
