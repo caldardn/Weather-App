@@ -1,0 +1,9 @@
+body{
+    background: hsl(200, 100%, 85%);
+    color: hsl(200, 98%, 26%)
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}

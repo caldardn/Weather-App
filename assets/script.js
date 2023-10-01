@@ -2,15 +2,28 @@ const key = '126d2bb719bd2d3f71661c8d719d7efd'
 let userInputEl = document.querySelector('#user-input')
 let locationEl = document.querySelector('#location')
 
+function addItem(city) {
+    var cities = JSON.parse(localStorage.getItem('cities')) || [];
+    cities.push(city);
+    console.log(cities)
+    localStorage.setItem('cities', JSON.stringify(cities));
+  }
+
+  function getItems() {
+    return JSON.parse(localStorage.getItem('cities')) || [];
+  }
 
 
 
 
-
+  
 
 userInputEl.addEventListener('submit', function(e){
     e.preventDefault()
     let location = locationEl.value
+    addItem(location)
+    
+   
    fetch(
     'https://api.openweathermap.org/data/2.5/forecast?q='+location+'&appid='+key+'&units=imperial',
     {
@@ -21,16 +34,17 @@ userInputEl.addEventListener('submit', function(e){
     )
     .then(function(response){
         return response.json()
+        
     })
     .then(function(data){
-        console.log(data)
+        
         document.getElementById('city').textContent = "City: " + data.city.name
         document.getElementById('currentDate').textContent = "date" + data.list[0].dt_txt
         document.getElementById('currentTemp').textContent = "Temperature: " + data.list[0].main.temp + "\xB0" + "F"
         document.getElementById('currentDisc').textContent = "Discription: " + data.list[0].weather[0].description
         document.getElementById('currentWind').textContent = "Wind Speed : " + data.list[0].wind.speed + " MPH"
         document.getElementById('currentHumidity').textContent = "Humidity: " + data.list[0].main.humidity + "%"
-        console.log(data.list[0].main)
+       
 
         document.getElementById('date1').textContent = "date" + data.list[9].dt_txt
         document.getElementById('temperature1').textContent = "Temperature: " + data.list[9].main.temp + "\xB0" + "F"
@@ -62,6 +76,7 @@ userInputEl.addEventListener('submit', function(e){
         document.getElementById('wind5').textContent = "Wind Speed : " + data.list[39].wind.speed + " MPH"
         document.getElementById('humidity5').textContent = "Humidity: " + data.list[39].main.humidity + "%"
     })
+    
  })
    
 
