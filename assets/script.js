@@ -1,15 +1,14 @@
 const key = "126d2bb719bd2d3f71661c8d719d7efd";
 let userInputEl = document.querySelector("#user-input");
 let locationEl = document.querySelector("#location");
-
+let errorEL = document.qu
 const history = JSON.parse(localStorage.getItem("cities")) || [];
 
 userInputEl.addEventListener("submit", function (e) {
   e.preventDefault();
   let location = locationEl.value.trim();
-
+  location = location.replace(/\b\w/g, (c) => c.toUpperCase());
   if (!history.includes(location)) {
-    location = location.replace(/\b\w/g, (c) => c.toUpperCase());
     history.push(location);
     localStorage.setItem("cities", JSON.stringify(history));
     renderHistoryBtns();
@@ -25,11 +24,15 @@ function seaarchCity(cityName) {
       "&appid=" +
       key +
       "&units=imperial"
+      
   )
     .then(function (response) {
-      return response.json();
+       
+          return response.json();
     })
     .then(function (data) {
+
+      
       let cIconImg0 = data.list[0].weather[0].icon;
       let currentIcon =
         "http://openweathermap.org/img/wn/" + cIconImg0 + ".png";
@@ -117,7 +120,9 @@ function seaarchCity(cityName) {
         "Humidity: " + data.list[39].main.humidity + "%";
       document.getElementById("icon5").src = icon39;
       console.log(data);
+      
     });
+   
 }
 
 function renderHistoryBtns() {
