@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="./assets/reset.css" />
-    <title>Document</title>
+    <title>Your Cities Weather</title>
 </head>
 <body>
     <header class="header">
@@ -15,7 +15,9 @@
         <div class="content">
           <div class="user-input-card">
             <div class="card">
+                
               <h3 class="card-header">Which City Are You Looking For?</h3>
+              <div id="error"></div>
               <form method="POST" id="user-input" class="card-body">
                 <input
                  name="city"
@@ -27,7 +29,7 @@
                 <button type="submit" class="btn">Search</button>
               </form>
             </div>
-            <h2 class="subtitle">
+            <h2>
                 Search History: 
             </h2>
             <div id="search-history"></div>

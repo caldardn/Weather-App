@@ -9,6 +9,7 @@ userInputEl.addEventListener("submit", function (e) {
   let location = locationEl.value.trim();
 
   if (!history.includes(location)) {
+    location = location.replace(/\b\w/g, (c) => c.toUpperCase());
     history.push(location);
     localStorage.setItem("cities", JSON.stringify(history));
     renderHistoryBtns();
@@ -122,12 +123,14 @@ function seaarchCity(cityName) {
 function renderHistoryBtns() {
   document.querySelector("#search-history").innerText = "";
   for (let i = 0; i < history.length; i++) {
-    var button = document.createElement("button");
-    button.innerText = history[i];
-    button.addEventListener("click", function () {
-      seaarchCity(history[i]);
-    });
-    document.querySelector("#search-history").append(button);
+    if (history[i] !== "") {
+      var button = document.createElement("button");
+      button.innerText = history[i];
+      button.addEventListener("click", function () {
+        seaarchCity(history[i]);
+      });
+      document.querySelector("#search-history").append(button);
+    }
   }
 }
 
