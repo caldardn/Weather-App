@@ -1,9 +1,28 @@
-body{
-    background: hsl(200, 100%, 85%);
+* {
+    box-sizing: border-box;
+  }
+ body{
+    background: hsl(200, 100%, 85%) !important;
     color: hsl(200, 98%, 26%)
 }
 
 .header {
     display: flex;
     align-items: center;
-}
+} 
+
+main .row .card-header {
+    display: flex;
+    justify-content: center;
+    padding: 2.5%;
+    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  }
+
+  .card {
+    margin: 0 0 20px 0;
+    border: 3px solid ;
+    border-radius: .3rem;
+  }
+/* .hide {
+    display: none;
+  } */
