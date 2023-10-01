@@ -62,26 +62,28 @@ main {
   box-shadow: 2px 2px var(--dark);
 }
 
-#search-history button{
-    font-size: 1.3rem;
-    text-decoration: none;
-    padding: 6px 5px;
-    width: 50%;
-    display: block;
-    margin: auto;
-    border-radius: var(--border-radius);
-    color: var(--primary);
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--dark);
-    transition: all 0.5s;
-    margin-top: 15px;
+#search-history button {
+  font-size: 1.3rem;
+  text-decoration: none;
+  padding: 6px 5px;
+  width: 50%;
+  display: block;
+  margin: auto;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  color: var(--primary);
+  background-color: var(--light-dark);
+  box-shadow: 3px 3px var(--dark);
+  transition: all 0.5s;
+  margin-top: 15px;
 }
 
-#search-history button:hover{
-    color: var(--primary);
-    background-color: var(--tertiary);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+#search-history button:hover {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  transform: translate(0, 0);
+  box-shadow: 2px 2px var(--dark);
 }
 
 .header {
@@ -100,8 +102,6 @@ main {
   box-shadow: 6px 5px var(--light-dark);
 }
 
-
-
 /* cards */
 .card {
   margin: 0 0 20px 0;
@@ -114,13 +114,13 @@ main {
   background-color: var(--dark);
   padding: 2.5%;
 }
-.five-day-header{
-border-radius: 5px;
-color: var(--primary);
-background-color: var(--dark);
-padding: 2% 2% 2% 2%;
-margin: 10px 0px 10px 0px;
-width: 80%;
+.five-day-header {
+  border-radius: 5px;
+  color: var(--primary);
+  background-color: var(--dark);
+  padding: 2% 2% 2% 2%;
+  margin: 10px 0px 10px 0px;
+  width: 80%;
 }
 
 .card-body {
@@ -128,17 +128,15 @@ width: 80%;
 }
 
 .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .five-day-cards {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  
+.five-day-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 /* form */
 .form-label,
@@ -155,9 +153,6 @@ width: 80%;
   border: 2px solid var(--light-dark);
   border-radius: var(--border-radius);
 }
-
-
-
 
 @media screen and (min-width: 768px) {
   .forcast-card {

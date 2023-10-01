@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,109 +8,104 @@
     <link rel="stylesheet" href="./assets/reset.css" />
     <title>Your Cities Weather</title>
 </head>
+
 <body>
     <header class="header">
         <h1 class="title">Weather Report</h1>
-      </header>
-      <main>
+    </header>
+    <main>
         <div class="content">
-          <div class="user-input-card">
-            <div class="card">
-                
-              <h3 class="card-header">Which City Are You Looking For?</h3>
-              <div id="error"></div>
-              <form method="POST" id="user-input" class="card-body">
-                <input
-                 name="city"
-                 type="text"
-                 id = "location"
-                 class="form-input"
-                 placeholder="e.g. Richmond"
-                />
-                <button type="submit" class="btn">Search</button>
-              </form>
+            <div class="user-input-card">
+                <div class="card">
+
+                    <h3 class="card-header">Which City Are You Looking For?</h3>
+                    <div id="error"></div>
+                    <form method="POST" id="user-input" class="card-body">
+                        <input name="city" type="text" id="location" class="form-input" placeholder="e.g. Richmond" />
+                        <button type="submit" class="btn">Search</button>
+                    </form>
+                </div>
+                <h2>
+                    Search History:
+                </h2>
+                <div id="search-history"></div>
+
+
             </div>
-            <h2>
-                Search History: 
-            </h2>
-            <div id="search-history"></div>
+            <div class="all-cards" id="weather-cards">
+                <div class="main-card">
+                    <div id="city"></div>
+                    <div id="currentDate"></div>
+                    <div id="weather"></div>
+                    <img src="" id="currentIcon" />
+                    <div id="currentDisc"></div>
+                    <div id="currentTemp"></div>
+                    <div id="currentWind"></div>
+                    <div id="currentHumidity"></div>
+                </div>
+                <h4 class="five-day-header">5 Day Forcast</h4>
 
-           
-          </div>
-        <div class="all-cards" id="weather-cards">
-        <div class="main-card">
-            <div id="city"></div>
-            <div id="currentDate"></div>
-            <div id="weather"></div>
-            <img src=""  id="currentIcon" />
-            <div id="currentDisc"></div>
-            <div id="currentTemp"></div>
-            <div id="currentWind"></div>
-            <div id="currentHumidity"></div>
-        </div>
-            <h4 class="five-day-header">5 Day Forcast</h4>
+                <div class="five-day-cards">
 
-            <div class="five-day-cards">
-             
-              
-              <div class="forcast-card">
-                <div id="date1"></div>
-                <div id="discription1"></div>
-                <img src="" id="icon1" />
-                <div id="temperature1"></div>
-                <div id="location1"></div>
-                <div id="wind1"></div>
-                <div id="humidity1"></div>
-              </div>
 
-              <section class="forcast-card">
-                <div id="date2"></div>
-                <div id="discription2"></div>
-                <img src="" id="icon2" />
-                <div id="temperature2"></div>
-                <div id="location2"></div>
-                <div id="wind2"></div>
-                <div id="humidity2"></div>
-              </section>
+                    <div class="forcast-card">
+                        <div id="date1"></div>
+                        <div id="discription1"></div>
+                        <img src="" id="icon1" />
+                        <div id="temperature1"></div>
+                        <div id="location1"></div>
+                        <div id="wind1"></div>
+                        <div id="humidity1"></div>
+                    </div>
 
-              <section class="forcast-card">
-                <div id="date3"></div>
-                <div id="discription3"></div>
-                <img src="" id="icon3" />
-                <div id="temperature3"></div>
-                <div id="location3"></div>
-                <div id="wind3"></div>
-                <div id="humidity3"></div>
-              </section>
+                    <section class="forcast-card">
+                        <div id="date2"></div>
+                        <div id="discription2"></div>
+                        <img src="" id="icon2" />
+                        <div id="temperature2"></div>
+                        <div id="location2"></div>
+                        <div id="wind2"></div>
+                        <div id="humidity2"></div>
+                    </section>
 
-              <section class="forcast-card">
-                <div id="date4"></div>
-                <div id="discription4"></div>
-                <img src="" id="icon4" />
-                <div id="temperature4"></div>
-                <div id="location4"></div>
-                <div id="wind4"></div>
-                <div id="humidity4"></div>
-              </section>
+                    <section class="forcast-card">
+                        <div id="date3"></div>
+                        <div id="discription3"></div>
+                        <img src="" id="icon3" />
+                        <div id="temperature3"></div>
+                        <div id="location3"></div>
+                        <div id="wind3"></div>
+                        <div id="humidity3"></div>
+                    </section>
 
-              <section class="forcast-card">
-                <div id="date5"></div>
-                <div id="discription5"></div>
-                <img src="" id="icon5" />
-                <div id="temperature5"></div>
-                <div id="location5"></div>
-                <div id="wind5"></div>
-                <div id="humidity5"></div>
-              </section>     
-             
-          </div>
-        </div>
-      </main>
+                    <section class="forcast-card">
+                        <div id="date4"></div>
+                        <div id="discription4"></div>
+                        <img src="" id="icon4" />
+                        <div id="temperature4"></div>
+                        <div id="location4"></div>
+                        <div id="wind4"></div>
+                        <div id="humidity4"></div>
+                    </section>
 
-    
+                    <section class="forcast-card">
+                        <div id="date5"></div>
+                        <div id="discription5"></div>
+                        <img src="" id="icon5" />
+                        <div id="temperature5"></div>
+                        <div id="location5"></div>
+                        <div id="wind5"></div>
+                        <div id="humidity5"></div>
+                    </section>
+
+                </div>
+            </div>
+    </main>
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
-</html>
 
+</html>
