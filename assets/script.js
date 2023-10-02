@@ -4,6 +4,7 @@ let locationEl = document.querySelector("#location");
 let errorEL = document.qu;
 const history = JSON.parse(localStorage.getItem("cities")) || [];
 
+// This function adds the users selection of city to local storage only if it a new entry. Then it calls seaarchCity and renderHistoryBtns function
 userInputEl.addEventListener("submit", function (e) {
   e.preventDefault();
   let location = locationEl.value.trim();
@@ -17,6 +18,7 @@ userInputEl.addEventListener("submit", function (e) {
   seaarchCity(location);
 });
 
+// This function fetches the api data and populates that data to HTML 
 function seaarchCity(cityName) {
   fetch(
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -119,6 +121,7 @@ function seaarchCity(cityName) {
     });
 }
 
+// This function creates a button from what the user entered and go into local storage to keep the previous searches available to the user. When the user selects the created button it will seach for that city
 function renderHistoryBtns() {
   document.querySelector("#search-history").innerText = "";
   for (let i = 0; i < history.length; i++) {
